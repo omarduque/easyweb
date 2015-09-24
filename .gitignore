@@ -1,0 +1,14 @@
+*.log
+*.pot
+*.pyc
+local_settings.py
+.codeintel/
+easyweb/
+*.py~
+*.md~
+static/admin
+.idea/
+*.project
+*.pydevproject
+./settings
+.sass-cache*
