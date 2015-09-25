@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from . import views
+
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='index.html'), name="home"),
-    url(r'^index.html', TemplateView.as_view(template_name='index.html'), name="home"),
+    url(r'^$', views.index, name="home"),
     url(r'^left-sidebar.html', TemplateView.as_view(template_name='left-sidebar.html'), name="left-sidebar"),
     url(r'^right-sidebar.html', TemplateView.as_view(template_name='right-sidebar.html'), name="right-sidebar"),
     url(r'^no-sidebar.html', TemplateView.as_view(template_name='no-sidebar.html'), name="no-sidebar"),
