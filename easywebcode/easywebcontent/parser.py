@@ -91,7 +91,17 @@ class wikihow():
             type = search_result['app']['sections'][x]['type']
 
             if type == 'intro':
-                result = result + search_result['app']['sections'][x]['image']['url']
+
+                testing = ''
+                try:
+                    value = search_result['app']['sections'][x]['image']['url']
+                except KeyError:
+                    testing = 'nokey'
+                    pass
+
+                if testing is not 'nokey':
+                    result = result + search_result['app']['sections'][x]['image']['url']
+
                 result = result + '</br>'
                 result = result + search_result['app']['sections'][x]['html']
                 result = result + '</br>'
@@ -100,9 +110,20 @@ class wikihow():
                 len_steps = len(search_result['app']['sections'][x]['methods'][0]['steps'])
 
                 for y in range(0, len_steps - 1):
+
+                    testing = ''
+                    try:
+                        value = search_result['app']['sections'][x]['image']['url']
+                    except KeyError:
+                        testing = 'nokey'
+                    pass
+
                     result = result + '</br>'
                     result = result + '<h2>Step ' + search_result['app']['sections'][x]['methods'][0]['steps'][y]['num'] + '</h2>'
-                    result = result + '<img src=' + search_result['app']['sections'][x]['methods'][0]['steps'][y]['image']['url'] + '>'
+
+                    if testing is not 'nokey':
+                        result = result + '<img src=' + search_result['app']['sections'][x]['methods'][0]['steps'][y]['image']['url'] + '>'
+
                     result = result + '</br>'
                     result = result + search_result['app']['sections'][x]['methods'][0]['steps'][y]['html']
                     result = result + '</br>'
