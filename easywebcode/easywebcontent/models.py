@@ -8,3 +8,5 @@ class Curated(models.Model):
     category = models.CharField(max_length=200)
     name = models.CharField(max_length=400)
     tool_url = models.CharField(max_length=400)
+    abstract = models.TextField(blank=True, null=True)
+    html = models.TextField(blank=True, null=True)
