@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from parser import wikihow
 from models import Curated
+import HTMLParser
 
 
 def index(request):
@@ -18,15 +19,18 @@ def index(request):
                 abstract = wikihow.extract_abstract(article_result)
                 url = wikihow.extract_url(article_result)
                 image = wikihow.extract_image(article_result)
-                 # html = wikihow.extract_html(article_result)
+                html = wikihow.extract_html(article_result)
+
+                # html_parser = HTMLParser.HTMLParser()
+                # html = html_parser.escape(html)
 
             return render(request,
                           'results.html',
                           {"fulltitle": fulltitle,
                            "abstract": abstract,
                            "url": url,
-                           "original": image
-                           # "html": html
+                           "original": image,
+                           "html": html
                           }
             )
 
@@ -43,10 +47,10 @@ def results(request):
     return render(request,
                   'results.html',
                   {"fulltitle": article.title,
-                   "abstract":article.abstract,
-                   "url":article.tool_url,
-                   "original":original,
-                   "html":article.html
+                   "abstract": article.abstract,
+                   "url": article.tool_url,
+                   "original": original,
+                   "html": article.html
                   }
     )
 

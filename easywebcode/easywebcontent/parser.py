@@ -80,8 +80,33 @@ class wikihow():
         return result
 
     @staticmethod
-    def extract_sections(search_result):
-        result = search_result['app']['sections'][00]
+    def extract_html(search_result):
+
+        num_sections = len(search_result['app']['sections'])
+
+        result = ''
+
+        for x in range(0, num_sections - 1):
+
+            type = search_result['app']['sections'][x]['type']
+
+            if type == 'intro':
+                result = result + search_result['app']['sections'][x]['image']['url']
+                result = result + '</br>'
+                result = result + search_result['app']['sections'][x]['html']
+                result = result + '</br>'
+
+            if type == 'steps':
+                len_steps = len(search_result['app']['sections'][x]['methods'][0]['steps'])
+
+                for y in range(0, len_steps - 1):
+                    result = result + '</br>'
+                    result = result + '<h2>Step ' + search_result['app']['sections'][x]['methods'][0]['steps'][y]['num'] + '</h2>'
+                    result = result + '<img src=' + search_result['app']['sections'][x]['methods'][0]['steps'][y]['image']['url'] + '>'
+                    result = result + '</br>'
+                    result = result + search_result['app']['sections'][x]['methods'][0]['steps'][y]['html']
+                    result = result + '</br>'
+
         return result
 
 
