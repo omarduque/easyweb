@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^left-sidebar.html', TemplateView.as_view(template_name='left-sidebar.html'), name="left-sidebar"),
     url(r'^right-sidebar.html', TemplateView.as_view(template_name='right-sidebar.html'), name="right-sidebar"),
     url(r'^no-sidebar.html', TemplateView.as_view(template_name='no-sidebar.html'), name="no-sidebar"),
+    url(r'^results.html', TemplateView.as_view(template_name='results.html'), name="no-sidebar"),
 ]
 
