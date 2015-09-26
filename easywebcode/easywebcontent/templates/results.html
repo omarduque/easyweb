@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+    Telephasic by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Easy Web</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="{% static 'assets/js/ie/html5shiv.js' %}"></script><![endif]-->
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="{% static 'assets/css/ie8.css' %}" /><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="{% static 'assets/css/ie9.css' %}" /><![endif]-->
+    </head>
+    <body class="no-sidebar">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <div id="header-wrapper">
+                    <div id="header" class="container">
+
+                        <!-- Logo -->
+                           <h1 id="logo"><a href="/">EasyWeb</a></h1>
+
+                        <!-- Nav 
+                            <nav id="nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Dropdown</a>
+                                        <ul>
+                                            <li><a href="#">Lorem ipsum dolor</a></li>
+                                            <li><a href="#">Magna phasellus</a></li>
+                                            <li><a href="#">Etiam dolore nisl</a></li>
+                                            <li>
+                                                <a href="#">Phasellus consequat</a>
+                                                <ul>
+                                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                                    <li><a href="#">Phasellus consequat</a></li>
+                                                    <li><a href="#">Magna phasellus</a></li>
+                                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Veroeros feugiat</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                                    <li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
+                                    <li><a href="no-sidebar.html">No Sidebar</a></li>
+                                </ul>
+                            </nav>
+-->
+                    </div>
+                </div>
+
+            <!-- Main -->
+                <div class="wrapper">
+                    <div class="container" id="main">
+
+                        <!-- Content -->
+                            <article id="content">
+                                <header>
+                                    <h2>{{ fulltitle }}</h2>
+                                    <p>{{ abstract }}</p>
+                                </header>
+                                <a href="#" class="image featured"><img src="{{ original }}" alt="" />{{ url }}</a>
+                                <p>{{ html }}</p>
+                            </article>
+
+                        <!--<div class="row features">
+                            <section class="4u 12u(narrower) feature">
+                                <div class="image-wrapper first">
+                                    <a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+                                </div>
+                                <header>
+                                    <h3>Dolor sit consequat magna</h3>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+                                vel sem sit dolor neque semper magna lorem ipsum.</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Elevate my awareness</a></li>
+                                </ul>
+                            </section>
+                            <section class="4u 12u(narrower) feature">
+                                <div class="image-wrapper">
+                                    <a href="#" class="image featured"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
+                                </div>
+                                <header>
+                                    <h3>Dolor sit consequat magna</h3>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+                                vel sem sit dolor neque semper magna lorem ipsum.</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Elevate my awareness</a></li>
+                                </ul>
+                            </section>
+                            <section class="4u 12u(narrower) feature">
+                                <div class="image-wrapper">
+                                    <a href="#" class="image featured"><img src="{% static 'images/pic05.jpg' %}" alt="" /></a>
+                                </div>
+                                <header>
+                                    <h3>Dolor sit consequat magna</h3>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+                                vel sem sit dolor neque semper magna lorem ipsum.</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Elevate my awareness</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    -->
+                    </div>
+                </div>
+                
+            <!-- Footer -->
+                <div id="footer-wrapper">
+                    <div id="footer" class="container">
+                        <header class="major">
+                            <h2>Subscribe to our platform to learn a new daily internet tip!</h2>
+                            <p>We aren't going to share your email with anybody else<br/>
+                            we just want to send you valuable contentf.</p> 
+                        </header>
+                        <div class="row">
+                            <section class="6u 12u(narrower)">
+                                <form method="post" action="#">
+                                    <div class="row 50%">
+                                        <div class="6u 12u(mobile)">
+                                            <input name="name" placeholder="Name" type="text" />
+                                        </div>
+                                        <div class="6u 12u(mobile)">
+                                            <input name="email" placeholder="Email" type="text" />
+                                        </div>
+                                    </div>
+                                    <!--<div class="row 50%">
+                                        <div class="12u">
+                                            <textarea name="message" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>-->
+                                    <div class="row 50%">
+                                        <div class="12u">
+                                            <ul class="actions">
+                                                <li><input type="submit" value="Sign up" /></li>
+                                                <!--<li><input type="reset" value="Clear form" /></li>-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                            <!--<section class="6u 12u(narrower)">
+                                <div class="row 0%">
+                                    <ul class="divided icons 6u 12u(mobile)">
+                                        <li class="icon fa-twitter"></li>
+                                        <li class="icon fa-facebook"><a href="#"><span class="extra">facebook.com/</span>untitled</a></li>
+                                        <li class="icon fa-dribbble"><a href="#"><span class="extra">dribbble.com/</span>untitled</a></li>
+                                    </ul>
+                                    <ul class="divided icons 6u 12u(mobile)">
+                                        <li class="icon fa-facebook"></li>
+                                        <li class="icon fa-instagram"><a href="#"><span class="extra">instagram.com/</span>untitled</a></li>
+                                        <li class="icon fa-youtube"><a href="#"><span class="extra">youtube.com/</span>untitled</a></li>
+                                        <li class="icon fa-pinterest"><a href="#"><span class="extra">pinterest.com/</span>untitled</a></li>
+                                    </ul>
+                                </div>
+                            </section>-->
+                        </div>
+                    </div>
+                    <div id="copyright" class="container">
+                        <ul class="menu">
+                            <li>&copy; 2015. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Power by: <a href="http://http://www.wikihow.com/">wikihow</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+        </div>
+
+
+        <!-- Scripts -->
+
+            <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+            <script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+            <script src="{% static 'assets/js/skel.min.js' %}"></script>
+            <script src="{% static 'assets/js/util.js' %}"></script>
+            <!--[if lte IE 8]><script src="{% static 'assets/js/ie/respond.min.js' %}"></script><![endif]-->
+            <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </body>
+</html>

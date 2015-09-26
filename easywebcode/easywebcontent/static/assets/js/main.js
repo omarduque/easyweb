@@ -52,7 +52,7 @@
 		// Off-Canvas Navigation.
 
 			// Navigation Button.
-				$(
+				/*$(
 					'<div id="navButton">' +
 						'<a href="#navPanel" class="toggle"></a>' +
 					'</div>'
@@ -83,6 +83,7 @@
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#navButton, #navPanel, #page-wrapper')
 						.css('transition', 'none');
+				*/
 
 	});
 
