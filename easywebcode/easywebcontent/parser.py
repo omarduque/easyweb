@@ -46,38 +46,38 @@ class wikihow():
 
     @staticmethod
     def extract_title(search_result):
-        title = search_result['query']['search'][00]['title']
-        return title
+        result = search_result['query']['search'][00]['title']
+        return result
 
     @staticmethod
     def extract_snippet(search_result):
-        snippet = search_result['query']['search'][00]['snippet']
-        return snippet
+        result = search_result['query']['search'][00]['snippet']
+        return result
 
     @staticmethod
     def extract_fulltitle(search_result):
-        snippet = search_result['app']['fulltitle']
-        return snippet
+        result = search_result['app']['fulltitle']
+        return result
 
     @staticmethod
     def extract_abstract(search_result):
-        snippet = search_result['app']['abstract']
-        return snippet
+        result = search_result['app']['abstract']
+        return result
 
     @staticmethod
     def extract_url(search_result):
-        snippet = search_result['app']['url']
-        return snippet
+        result = search_result['app']['url']
+        return result
 
     @staticmethod
     def extract_image(search_result):
-        snippet = search_result['app']['image']['original']
-        return snippet
+        result = search_result['app']['image']['url']
+        return result
 
     @staticmethod
     def extract_sections(search_result):
-        snippet = search_result['app']['sections'][00]
-        return snippet
+        result = search_result['app']['sections'][00]
+        return result
 
 
 
