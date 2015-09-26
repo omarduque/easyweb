@@ -2,7 +2,7 @@ __author__ = 'abeduarterey'
 from StringIO import StringIO
 import pycurl
 import simplejson
-
+import urllib
 
 class wikihow():
 
@@ -14,14 +14,18 @@ class wikihow():
         if search_query == 'none':
             results.append('no key')
         else:
-            query = searchwikiurl+search_query
+            query = searchwikiurl + urllib.quote_plus(search_query)
             buffer = StringIO()
             connection = pycurl.Curl()
+            connection.setopt(pycurl.USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1')
             connection.setopt(connection.URL, query)
             connection.setopt(connection.WRITEDATA, buffer)
             connection.perform()
             connection.close()
             results = simplejson.loads(buffer.getvalue())
+
+            # output = urllib2.urlopen(query).read()
+            # results = simplejson.loads(output)
 
         return results
 
@@ -33,9 +37,10 @@ class wikihow():
         if search_query == 'none':
             results.append('no key')
         else:
-            query = searchwikiurl + search_query
+            query = searchwikiurl + urllib.quote_plus(search_query)
             buffer = StringIO()
             connection = pycurl.Curl()
+            connection.setopt(pycurl.USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1')
             connection.setopt(connection.URL, query)
             connection.setopt(connection.WRITEDATA, buffer)
             connection.perform()
